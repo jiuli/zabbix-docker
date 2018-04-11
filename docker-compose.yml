@@ -37,8 +37,8 @@ services:
     
   jiuli-zabbix-agent:
       image: zabbix/zabbix-agent:alpine-3.4-latest
-#      ports: 
-#        - "10050:10050"
+      ports: 
+        - "10050:10050"
 #      links:
 #        - jiuli-zabbix-proxy-mysql:zabbix-proxy-mysql
       environment:
