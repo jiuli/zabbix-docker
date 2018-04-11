@@ -10,7 +10,7 @@ services:
   
     
   jiuli-zabbix-server-mysql:
-    image: zabbix/zabbix-server-mysql:alpine-3.4-latest
+    image: zabbix/zabbix-server-mysql:centos-3.4-latest
 #    links: 
 #      - jiuli-mysql:mysql
     ports: 
@@ -23,7 +23,7 @@ services:
     restart: always
   
 #  jiuli-zabbix-proxy-mysql:
-#      image: zabbix/zabbix-proxy-mysql:alpine-3.4-latest
+#      image: zabbix/zabbix-proxy-mysql:centos-3.4-latest
 ##      links:
 ##        - jiuli-mysql:mysql
 ##        - jiuli-zabbix-server-mysql:zabbix-server-mysql
@@ -38,7 +38,7 @@ services:
       
     
   jiuli-zabbix-agent:
-      image: zabbix/zabbix-agent:alpine-3.4-latest
+      image: zabbix/zabbix-agent:centos-3.4-latest
       ports: 
         - "10050:10050"
 #      links:
@@ -49,7 +49,7 @@ services:
       restart: always
    
   jiuli-zabbix-web-nginx-mysql:
-      image: zabbix/zabbix-web-nginx-mysql:alpine-3.4-latest
+      image: zabbix/zabbix-web-nginx-mysql:centos-3.4-latest
 #      links: 
 #        - jiuli-mysql:mysql
 #        - jiuli-zabbix-server-mysql:zabbix-server
