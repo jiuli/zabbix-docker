@@ -24,7 +24,7 @@ services:
   jiuli-zabbix-proxy-mysql:
       image: zabbix/zabbix-proxy-mysql:3.4.0
       links:
-        jiuli-zabbix-server-mysql: zabbix-server-mysql
+        - jiuli-zabbix-server-mysql:zabbix-server-mysql
       restart: always
       
     
@@ -33,7 +33,7 @@ services:
 #      ports: 
 #        - "10050:10050"
       links:
-        jiuli-zabbix-proxy-mysql: zabbix-proxy-mysql
+        - jiuli-zabbix-proxy-mysql:zabbix-proxy-mysql
       restart: always
    
   jiuli-zabbix-web-nginx-mysql:
